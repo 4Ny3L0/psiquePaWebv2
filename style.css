@@ -1,0 +1,258 @@
+:root {
+}
+* {
+  margin: 0;
+}
+body {
+  width: 100%;
+  background: rgb(246, 155, 199);
+  background: linear-gradient(
+    90deg,
+    rgba(246, 155, 199, 1) 12%,
+    rgba(250, 128, 232, 1) 93%
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  color: white;
+  margin: 0;
+}
+.page-container {
+  position: relative;
+  width: 100%;
+}
+.navbar {
+  color: #fff;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.navbar > img {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 5rem;
+}
+.navbar-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.navbar-options .option a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  /* width: 100%; */
+}
+
+.navbar-options .option a img {
+  vertical-align: text-bottom;
+  margin-right: 0.2rem;
+  /* width: 100%; */
+}
+
+.navbar-options .option {
+  text-align: center;
+  margin-right: 1rem;
+  vertical-align: middle;
+  list-style: none;
+  width: 8rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.my-info {
+  text-align: center;
+  width: 100%;
+  max-width: 30rem;
+  margin: 2rem auto 0;
+}
+
+.my-info img {
+  width: 30rem;
+  height: 30rem;
+  background-color: black;
+}
+
+.my-info p {
+  margin-top: 1rem;
+  text-align: inherit;
+}
+
+.services {
+  width: 100%;
+  height: 30rem;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+.services button {
+  background-color: hsl(290, 50%, 83%);
+  border-color: hsl(290, 50%, 83%);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.services button:hover {
+  cursor: pointer;
+  color: hsl(290, 50%, 83%);
+  background-color: #fff;
+  border-color: hsl(290, 50%, 83%);
+}
+
+.services-grid {
+  margin: 2 auto 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+  column-gap: 5rem;
+  row-gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  margin-top: 2rem;
+  width: auto;
+  height: auto;
+  border: 1px solid #0000002c;
+  padding: 1rem;
+  box-shadow: 5px 3px rgba(75, 66, 66, 0.158);
+}
+
+.service-card button {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  width: 8rem;
+}
+
+.services .all-services-btn {
+  width: 30rem;
+  margin: 4rem auto 0;
+}
+
+.services .all-services-btn button {
+  /* margin-top: 2rem; */
+  padding: 0.7rem;
+}
+
+.blogs {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  background-color: gray;
+}
+
+.workshops {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  background-color: yellow;
+}
+
+.contact {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  background-color: burlywood;
+}
+
+.footer {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.footer p,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.footer img {
+  width: 4rem;
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    margin: 2rem auto 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+    justify-content: center;
+  }
+  .service-card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    transition: 0.5s ease-in-out;
+  }
+  .navbar.active {
+    background: rgb(246, 155, 199);
+    background: linear-gradient(
+      90deg,
+      rgba(246, 155, 199, 1) 12%,
+      rgba(250, 128, 232, 1) 93%
+    );
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    padding: 0;
+    justify-content: start;
+  }
+  .navbar img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
+  .navbar-options .option a img {
+    width: 1.5rem;
+    /* vertical-align: middle; */
+  }
+  .navbar-options {
+    display: none;
+    padding: 0;
+    margin-left: 1.5rem;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-options .option a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .services {
+    display: block;
+    margin: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+  .services-grid {
+    margin: 0;
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .service-card {
+    width: auto;
+    margin: 0 auto;
+  }
+}
