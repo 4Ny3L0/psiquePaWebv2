@@ -3,6 +3,9 @@
 * {
   margin: 0;
 }
+body > h1,h2,h3,h4{
+  text-align: center;
+}
 body {
   width: 100%;
   background: rgb(246, 155, 199);
@@ -84,7 +87,7 @@ body {
 
 .services {
   width: 100%;
-  height: 30rem;
+  /* height: 30rem; */
   margin: 3rem auto 0;
   text-align: center;
 }
@@ -120,6 +123,11 @@ body {
   border: 1px solid #0000002c;
   padding: 1rem;
   box-shadow: 5px 3px rgba(75, 66, 66, 0.158);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .service-card button {
@@ -134,22 +142,75 @@ body {
 }
 
 .services .all-services-btn button {
-  /* margin-top: 2rem; */
   padding: 0.7rem;
 }
-
 .blogs {
   display: block;
   width: 100%;
-  height: 10rem;
-  background-color: gray;
+  margin: 2rem auto 3rem;
+  /* background-color: gray; */
+  text-align: center;
+  /* Color morado oscuro  background: rgb(148, 0, 211); */
+  /* background: linear-gradient(
+    90deg,
+    rgba(148, 0, 211, 1) 12%, */
+  /* Morado oscuro rgba(186, 85, 211, 1) 50%, */
+  /* Morado intermedio rgba(238, 130, 238, 1) 93% */ /* Lavanda claro */
+  /* ); */
+}
+
+.blogs button {
+  margin-top: 2rem;
+  padding: 0.7rem;
+  background-color: hsl(290, 50%, 83%);
+  border-color: hsl(290, 50%, 83%);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.blogs h2 {
+  margin-top: 3rem;
+}
+
+.blogs-container {
+  display: grid;
+  width: 100%;
+  max-width: 70rem;
+  margin: 2rem auto 3rem;
+  text-align: center;
+  grid-template-columns: repeat(3, 0.5fr);
+  column-gap: 5rem;
+  justify-content: center;
+}
+
+.blog-card {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: auto;
+  padding: 2rem;
+  border: 1px solid #0000002c;
+  padding: 1rem;
+  box-shadow: 5px 3px rgba(75, 66, 66, 0.158);
+}
+
+.blogs button:hover {
+  cursor: pointer;
+  color: hsl(290, 50%, 83%);
+  background-color: #fff;
+  border-color: hsl(290, 50%, 83%);
 }
 
 .workshops {
   display: block;
   width: 100%;
   height: 10rem;
-  background-color: yellow;
+  /* background-color: yellow; */
+  text-align: center;
+}
+.workshops h2{
+  
 }
 
 .contact {
@@ -189,6 +250,23 @@ img {
   .service-card {
     margin: 0 auto;
   }
+
+  .blogs-container {
+    display: grid;
+    width: auto;
+    margin: 2rem auto 3rem;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+    justify-content: center;
+  }
+
+  .blog-card {
+    margin: 0 2rem;
+    width: auto;
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -220,7 +298,6 @@ img {
   }
   .navbar-options .option a img {
     width: 1.5rem;
-    /* vertical-align: middle; */
   }
   .navbar-options {
     display: none;
@@ -241,18 +318,29 @@ img {
     margin: 0;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    height: 30rem;
     text-align: center;
   }
   .services-grid {
     margin: 0;
     margin-top: 2rem;
-    grid-template-columns: 1fr;
-    width: 100%;
+    grid-template-columns: .9fr;
+    width: auto;
   }
 
   .service-card {
-    width: auto;
     margin: 0 auto;
+  }
+
+  .services .all-services-btn {
+    width: 100%;
+   
+  }
+
+  .blogs-container {
+    grid-template-columns: .9fr;
+    width: auto;
+  }
+  .blog-card {
+    margin: 0;
   }
 }
